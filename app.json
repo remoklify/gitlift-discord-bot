@@ -1,0 +1,28 @@
+{
+  "name": "gitlift-discord-bot",
+  "description": "Gitlift Business Logic Server.",
+  "website": "https://opentemplatehub.com/product/server/business-logic-server-template",
+  "repository": "https://github.com/remoklify/gitlift-discord-bot",
+  "logo": "https://raw.githubusercontent.com/remoklify/remoklify.github.io/master/assets/logo/favicon.png",
+  "keywords": [
+    "info",
+    "information",
+    "business-logic",
+    "mongo",
+    "mongodb",
+    "mongoose",
+    "backend",
+    "rest",
+    "node",
+    "nodejs",
+    "typescript",
+    "template",
+    "server template",
+    "open template hub",
+    "remoklify",
+    "gitlift",
+    "git",
+    "github",
+    "github profile"
+  ]
+}

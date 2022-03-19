@@ -1,0 +1,52 @@
+{
+  "name": "gitlift-discord-bot",
+  "description": "Gitlift Discord Bot.",
+  "version": "1.0.0",
+  "license": "MIT",
+  "main": "gitlift-discord-bot-server.main.ts",
+  "scripts": {
+    "start": "ts-node gitlift-discord-bot-server.main.ts",
+    "startLocal": "nodemon --exec DEBUG=* ts-node gitlift-discord-bot-server.main.ts"
+  },
+  "dependencies": {
+    "axios": "^0.24.0",
+    "body-parser": "^1.19.1",
+    "cors": "^2.8.5",
+    "crypto-js": "^4.1.1",
+    "discord.js": "^13.6.0",
+    "dotenv": "^10.0.0",
+    "graphql": "^16.2.0",
+    "mongoose": "^6.1.1",
+    "ts-node": "^10.3.0",
+    "typescript": "^4.5.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "git repository": "https://github.com/remoklify/gitlift-discord-bot",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/remoklify/gitlift-discord-bot.git"
+  },
+  "keywords": [
+    "info",
+    "information",
+    "business-logic",
+    "mongo",
+    "mongodb",
+    "mongoose",
+    "backend",
+    "rest",
+    "node",
+    "nodejs",
+    "typescript",
+    "template",
+    "server template",
+    "open template hub",
+    "remoklify",
+    "gitlift",
+    "git",
+    "github",
+    "github profile"
+  ]
+}
