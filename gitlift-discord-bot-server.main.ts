@@ -35,13 +35,16 @@ client.on('messageCreate', (message) => {
     axios
       .get<any>(url)
       .then((res: any) => {
-        console.log(res);
         const reply =
           'Name: ' +
           res.data.coreInformation.name +
           '\n' +
           'Total Contributions: ' +
-          res.data.contribution.totalContributionsCount;
+          res.data.contribution.totalContributionsCount +
+          '\n' +
+          'For more information about this user, you can check this Gitlift Profile: ' +
+          'https://gitlift.com/user/' +
+          message.content;
         message.reply(reply);
       })
       .catch((e) => {
