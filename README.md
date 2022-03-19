@@ -21,7 +21,7 @@ Remoklify - Gitlift Discord Bot
 [![Release](https://img.shields.io/github/release/remoklify/gitlift-discord-bot?include_prereleases&color=43b043&style=for-the-badge)](https://github.com/remoklify/gitlift-discord-bot/releases)
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/remoklify_gitlift-discord-bot?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=remoklify_gitlift-discord-bot)
 
-Gitlift Discord Bot which is listening Discord Messages to reply with user gitlift profile and total contributions.
+Gitlift Discord Bot is a discord bot which is listening Discord Messages to reply with user gitlift profile and total contributions.
 
 ## Ways to Begin
 
