@@ -1,7 +1,7 @@
 /**
  * @description holds server main
  */
-import { DebugLogUtil, UsageUtil } from '@open-template-hub/common';
+import { DebugLogUtil } from '@open-template-hub/common';
 import dotenv from 'dotenv';
 import * as Discord from 'discord.js';
 import axios from 'axios';
