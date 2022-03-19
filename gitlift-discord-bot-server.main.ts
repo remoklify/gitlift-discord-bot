@@ -42,7 +42,7 @@ client.on('messageCreate', (message) => {
           'Total Contributions: ' +
           res.data.contribution.totalContributionsCount +
           '\n' +
-          'For more information about this user, you can check this Gitlift Profile: ' +
+          'For more information about this user, you can check the Gitlift Profile: ' +
           'https://gitlift.com/user/' +
           message.content;
         message.reply(reply);
