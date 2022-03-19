@@ -10,9 +10,8 @@
   </a>
 </p>
 
-
 <h1 align="center">
-Remoklify - Gitlift Business Logic Server v1
+Remoklify - Gitlift Discord Bot
 </h1>
 
 [![License](https://img.shields.io/github/license/remoklify/gitlift-discord-bot?color=43b043&style=for-the-badge)](LICENSE)
@@ -22,7 +21,7 @@ Remoklify - Gitlift Business Logic Server v1
 [![Release](https://img.shields.io/github/release/remoklify/gitlift-discord-bot?include_prereleases&color=43b043&style=for-the-badge)](https://github.com/remoklify/gitlift-discord-bot/releases)
 [![SonarCloud](https://img.shields.io/sonar/quality_gate/remoklify_gitlift-discord-bot?server=https%3A%2F%2Fsonarcloud.io&label=Sonar%20Cloud&style=for-the-badge&logo=sonarcloud)](https://sonarcloud.io/dashboard?id=remoklify_gitlift-discord-bot)
 
-Gitlift Business Logic Server consumes Github API v4 (Graphql) and implements business logic for Gitlift UI.
+Gitlift Discord Bot which is listening Discord Messages to reply with user gitlift profile and total contributions.
 
 ## Ways to Begin
 
@@ -31,7 +30,6 @@ Gitlift Business Logic Server consumes Github API v4 (Graphql) and implements bu
 Deploy this template to Heroku
 
 [![Deploy](https://img.shields.io/badge/Deploy_to-Heroku-7056bf.svg?style=for-the-badge&logo=heroku)](https://heroku.com/deploy?template=https://github.com/remoklify/gitlift-discord-bot)
-
 
 ### 2. GitHub Template
 
@@ -56,17 +54,11 @@ Check project's current **nodejs** and **npm** version from **[package.json](pac
 
 If you don't give **RESPONSE_ENCRYPTION_SECRET**, response encryption mechanism will be disabled automatically.
 
-``` applescript
-PORT=4002
+```applescript
+PORT=6782
 
-PROJECT=GITLIFT
-MODULE=BusinessLogicServer
-ENVIRONMENT=Local
-
-GITHUB_API_AUTH_TOKEN=Bearer ghp_xxxxxxx
-GITHUB_API_URL=https://api.github.com/graphql
-
-RESPONSE_ENCRYPTION_SECRET={Response Encryption Secret}
+CLIENT_TOKEN={Discord Client Token}
+GITLIFT_BL_SERVER_URL={Gitlift Business Logic Server Url}
 ```
 
 ## Contributors
@@ -82,6 +74,7 @@ RESPONSE_ENCRYPTION_SECRET={Response Encryption Secret}
 
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
 ## LICENSE
