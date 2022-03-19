@@ -35,21 +35,26 @@ client.on('messageCreate', (message) => {
     axios
       .get<any>(url)
       .then((res: any) => {
-        const reply =
-          'Name: ' +
-          res.data.coreInformation.name +
-          '\n' +
-          'Total Contributions: ' +
-          res.data.contribution.totalContributionsCount +
-          '\n' +
-          'For more information about this user, you can check the Gitlift Profile: ' +
-          'https://gitlift.com/user/' +
-          message.content;
-        message.reply(reply);
+        if (res.data.coreInformation.name) {
+          const reply =
+            'Name: ' +
+            res.data.coreInformation.name +
+            '\n' +
+            'Total Contributions: ' +
+            res.data.contribution.totalContributionsCount +
+            '\n' +
+            'For more information about this user, you can check the Gitlift Profile: ' +
+            'https://gitlift.com/user/' +
+            message.content;
+
+          message.reply(reply);
+        } else {
+          message.reply('I can not tell much about it..');
+        }
       })
       .catch((e) => {
         console.log(e);
-        message.reply('I can not anything tell about him..');
+        message.reply('I can not tell much about it..');
       });
   }
 });
