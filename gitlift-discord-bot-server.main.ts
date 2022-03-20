@@ -28,34 +28,41 @@ client.once('ready', () => {
 client.on('messageCreate', (message) => {
   if (message.author.id === client.user?.id) return;
 
-  if (message.content && message.content.length > 0) {
-    const url =
-      process.env.GITLIFT_BL_SERVER_URL + '?username=' + message.content;
+  if (
+    message.content &&
+    message.content.length > 0 &&
+    message.content.startsWith('!Gitlift')
+  ) {
+    const msg = message.content.split(' ')[1];
 
-    axios
-      .get<any>(url)
-      .then((res: any) => {
-        if (res.data.coreInformation.name) {
-          const reply =
-            'Name: ' +
-            res.data.coreInformation.name +
-            '\n' +
-            'Total Contributions: ' +
-            res.data.contribution.totalContributionsCount +
-            '\n' +
-            'For more information about this user, you can check the Gitlift Profile: ' +
-            'https://gitlift.com/user/' +
-            message.content;
+    if (msg) {
+      const url = process.env.GITLIFT_BL_SERVER_URL + '?username=' + msg;
 
-          message.reply(reply);
-        } else {
+      axios
+        .get<any>(url)
+        .then((res: any) => {
+          if (res.data.coreInformation.name) {
+            const reply =
+              'Name: ' +
+              res.data.coreInformation.name +
+              '\n' +
+              'Total Contributions: ' +
+              res.data.contribution.totalContributionsCount +
+              '\n' +
+              'For more information about this user, you can check the Gitlift Profile: ' +
+              'https://gitlift.com/user/' +
+              msg;
+
+            message.reply(reply);
+          } else {
+            message.reply('I can not tell much about it..');
+          }
+        })
+        .catch((e) => {
+          console.log(e);
           message.reply('I can not tell much about it..');
-        }
-      })
-      .catch((e) => {
-        console.log(e);
-        message.reply('I can not tell much about it..');
-      });
+        });
+    }
   }
 });
 
